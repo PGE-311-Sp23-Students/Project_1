@@ -36,11 +36,15 @@ img = img.reshape(nz,ny,nx)
 
 #####################################
 
-aperture = np.zeros((img.shape[1], img.shape[2]))
 
-for j in range(img.shape[1]):
-    for i in range(img.shape[2]):
-        aperture[j, i] = np.count_nonzero(img[:, j, i] == 0)
+
+
+
+
+
+
+
+
         
 
 #%%
@@ -50,8 +54,12 @@ for j in range(img.shape[1]):
 # that computes and returns the Minimum, Maximum of any aperture field.
 # Execute this function using above aperture field a.
 ####################################
-def aperture_statistics(field):
-    return np.amin(field), np.amax(field)
+
+
+
+
+
+
 
 
 #%%
@@ -62,16 +70,14 @@ def aperture_statistics(field):
 # Execute this function using above aperture field a.
 ###################################
 
-def aperture_mean(field):
-    aperture_size = field.shape[0] * field.shape[1]
-    
-    aperture_sum = 0
-    for j in range(field.shape[1]):
-        for i in range(field.shape[0]):
-            aperture_sum += field[i, j]
-            
-    aperture_mean = aperture_sum / aperture_size
-    return aperture_mean
+
+
+
+
+
+
+
+
 
 
 #%%
@@ -82,15 +88,12 @@ def aperture_mean(field):
 # Execute this function using above aperture field a.
 ###################################
 
-def roughness_coeff(field):
-    roughness_sum = 0
-    for j in range(field.shape[1] - 1):
-        for i in range(field.shape[0]):
-            roughness_sum += (field[i, j+1] - field[i, j]) ** 2
-            
-    aperture_size = field.shape[0] * field.shape[1]        
-    roughness_coeff = np.sqrt(roughness_sum / aperture_size)
-    return roughness_coeff
+
+
+
+
+
+
 
 
 #%%
@@ -100,18 +103,16 @@ def roughness_coeff(field):
 # that calculates and returns the tortuosity (eq. 3 from paper in repo)
 # Execute this function using above aperture field a.
 ###################################
-def tortuosity(field):
-    tortuosity_sum = 0
-    tmp = np.zeros(field.shape[0])
-    
-    for i in range(field.shape[0]):
-        tmp[i] = 0
-        for j in range(field.shape[1] - 1):
-            tmp[i] += np.sqrt((field[i,j+1]-field[i,j]) ** 2 + 1) 
-            
-        tortuosity_sum += tmp[i] / field.shape[0]
-    tortuosity = tortuosity_sum / field.shape[1]
-    return tortuosity
+
+
+
+
+
+
+
+
+
+
 
 #%%
 ####################################
@@ -123,9 +124,16 @@ def tortuosity(field):
 # same aperture as the mean (calculated in Problem 4)
 
 ###################################
-def perm(field):
-    B = aperture_mean(field) /2
-    
-    perm = (B ** 2)/ 3
-    return perm
+
+
+
+
+
+
+
+
+
+
+
+
 
