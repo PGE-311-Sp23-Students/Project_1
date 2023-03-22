@@ -33,7 +33,7 @@ In this project we will work with an image of a fracture data from Digital Rocks
  
 *Figure 4. A schematic of a fracture enclosed by two surfaces (shown in gray).(left) The aperture a(j,i) for our purposes is defined as a vertical (z-direction) distance between two planes at the location (j,i). In our discretized world, then, we will define aperture at every point (i,j) of the fracture image. Parallel plate model (often used for fractures) from the Transport Phenomena textbook by Bird, Stewart and Lightfoot textbook used in PGE 322K.(right) Here the aperture is the same everywhere and equal 2B.*
 
-
+In project1.py, you need to finish below problems:
 - (10 points)Problem 1: Create a 3D plot of the fracture surface and upload either an image or an animation(5 bonus points) into your repo.
 - (20 points)Problem 2: Create aperture field called a based on a 3D array called img, upload a histogram plot and a 2D colorplot of this aperture field a into your repo.
 - (14 points)Problem 3: Calculate the Minimum, Maximum of aperture field a.
