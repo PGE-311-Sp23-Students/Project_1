@@ -5,13 +5,12 @@ import nbconvert
 # Assignment-specific packages
 import numpy as np
 import pandas as pd
-import pyvista as pv
-import matplotlib.pyplot as plt
+
 # Convert the assignment Jupyter notebooks into something we can import
 
 
 # Import the converted file. Best to import only the variables you want to test
-from project1 import aperture_statistics, aperture_mean, roughness_coeff, tortuosity, perm
+from project1_2 import aperture_statistics, aperture_mean, roughness_coeff, tortuosity, perm
 
 # Here is where you will write your tests
 class TestSolution(unittest.TestCase):
