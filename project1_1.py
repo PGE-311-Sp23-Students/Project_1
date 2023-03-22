@@ -36,15 +36,13 @@ img = img.reshape(nz,ny,nx)
 # Let the function save image in .png format using the specific choice of color and orientation.
 # Bonus: figure out how to save enough .png frames to create a video (animation of the frames)
 ###################################
-pl = pv.Plotter()
-pl.set_background(color='w')
 
-vtk_pore = pv.wrap(img)
-pore_contours = vtk_pore.contour(isosurfaces=[0.5])
 
-pl.add_mesh(pore_contours, opacity=0.9, color=(0/255, 0.25, 252/255))
 
-pl.show()
+
+
+
+
         
 
 #%%
@@ -58,15 +56,17 @@ pl.show()
 # histogram and 2D colorplot of aperture field (imshow) if plot_a = 'y').
 #####################################
 
-aperature = np.zeros((img.shape[1], img.shape[2]))
 
-for j in range(img.shape[1]):
-    for i in range(img.shape[2]):
-        aperature[j, i] = np.count_nonzero(img[:, j, i] == 0)
-        
-plt.hist(aperature.flatten())
 
-plt.figure(dpi=500)
-plt.imshow(aperature)
-plt.colorbar()
+
+
+
+
+
+
+
+
+
+
+
 
